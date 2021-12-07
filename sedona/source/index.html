@@ -16,16 +16,16 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--active">
-              <a>Главная</a>
+              <a class="main-nav__link">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">Фото и видео</a>
+              <a class="main-nav__link" href="catalog.html">Фото и видео</a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html">Форма отзыва</a>
+              <a class="main-nav__link" href="form.html">Форма отзыва</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">HTML academy</a>
+              <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
             </li>
           </ul>
         </div>
@@ -33,14 +33,131 @@
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Добро пожаловать в великолепную - Sedona</h1>
-      <div class="feature">
-        <div class="feature__wrapper">
-          <header class="feature__header">
-            <h2 class="feature__title">СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <section class="features">
+        <div class="features__wrapper">
+          <header class="features__header">
+            <h2 class="features__title">
+              СЕДОНА — небольшой городок в Аризоне, 
+              <br> заслуживающий большего!
+            </h2>
+            <p class="features__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
           </header>
-          <p class="feature__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+          <ul class="features__list">
+            <li class="features__item features-city">
+              <h3 class="features-city__title">Настоящий
+                <br> городок
+              </h3>
+              <p class="features-city__description">
+                Седона не аттракцион для
+                <br> туристов, там течёт своя
+                <br> жизнь.
+              </p>
+              <ul class="features-city__list">
+                <li class="features-city__item features-city--accommodation">
+                  <h4 class="features-city__subtitle">Жилье</h4>
+                  <p class="features-city__text">
+                    Рекомендуем пожить в
+                    <br> настоящем мотеле, все
+                    <br> как в кино!
+                  </p>
+                </li>
+                <li class="features-city__item features-city--food">
+                  <h4>Еда</h4>
+                  <p>
+                    Всегда заказывайте
+                    <br> фирменный бургер,
+                    <br> вы не разочаруетесь!
+                  </p>
+                </li>
+                <li class="features-city__item features-city--souvenirs">
+                  <h4>Сувениры</h4>
+                  <p>
+                    Не только китайского, но
+                    <br> и местного производства!
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li class="features__item features-bridge">
+              <h3 class="features-bridge__title">
+                Там есть
+                <br> мост дьявола
+              </h3>
+              <p class="features-bridge__description">
+                Да, по нему можно
+                <br> пройти! Если вы
+                <br> осмелитесь, конечно
+              </p>
+            </li>
+            <li class="features__item features-place">
+              <h3 class="features-place__title">
+                Небольшая <br> площадь
+              </h3>
+              <p class="features-place__description">
+                Все интересные места
+                <br> находятся очень близко
+              </p>
+            </li>
+            <li class="features__item features-road">
+              <h3 class="features-road__title">
+                Красивая <br> 
+                дорога
+              </h3>
+              <p class="features-road__description">
+                Ехать в Седону из 
+                <br> Лас-Вегаса совсем 
+                <br> не скучно!
+                </p>
+            </li>
+            <li class="features__item features-tourists">
+              <h3 class="features-tourists__title">
+                Мало
+                <br> туристов
+              </h3>
+              <p class="features-tourists__description">
+                Большинство едет в
+                <br> гранд каньон и
+                <br> толпится там
+              </p>
+            </li>
+          </ul>
         </div>
-      </div>
+      </section>
+      <section class="page-visit">
+        <div class="visit-wrapper">
+          <h2 class="visit__title">Заинтересовались?</h2>
+          <p class="visit__description">
+            Укажите предполагаемые даты
+            <br> поездки, и мы покажем вам лучшие 
+            <br> предложения гостиниц в Седоне
+          </p>
+          <button class="button button--hover button--down button--disabled" type="button">Найти гостиницу</button>
+        </div>
+        <img class="visit__map" src="img/mobile/map-mobile.jpg" width="320" height="350" alt="Расположение Седоны на карте">
+      </section>
     </main>
+    <footer class="page-footer">
+      <div class="footer-wrapper">
+        <h2 class="page-footer__title">#visitSedona</h2>
+        <ul class="social-list">
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+        </ul>
+        <a class="page-footer__developer developer__icon" href="#">Разработано</a>
+      </div>
+    </footer>
   </body>
 </html>
