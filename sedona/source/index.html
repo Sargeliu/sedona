@@ -53,7 +53,7 @@
                 <br> жизнь.
               </p>
               <ul class="features-city__list">
-                <li class="features-city__item features-city--accommodation">
+                <li class="features-city__item features-city__item--accommodation">
                   <h4 class="features-city__subtitle">Жилье</h4>
                   <p class="features-city__text">
                     Рекомендуем пожить в
@@ -61,17 +61,17 @@
                     <br> как в кино!
                   </p>
                 </li>
-                <li class="features-city__item features-city--food">
-                  <h4>Еда</h4>
-                  <p>
+                <li class="features-city__item features-city__item--food">
+                  <h4 class="features-city__subtitle">Еда</h4>
+                  <p class="features-city__text">
                     Всегда заказывайте
                     <br> фирменный бургер,
                     <br> вы не разочаруетесь!
                   </p>
                 </li>
-                <li class="features-city__item features-city--souvenirs">
-                  <h4>Сувениры</h4>
-                  <p>
+                <li class="features-city__item features-city__item--souvenirs">
+                  <h4 class="features-city__subtitle">Сувениры</h4>
+                  <p class="features-city__text">
                     Не только китайского, но
                     <br> и местного производства!
                   </p>
@@ -123,7 +123,7 @@
           </ul>
         </div>
       </section>
-      <section class="page-visit">
+      <section class="visit">
         <div class="visit-wrapper">
           <h2 class="visit__title">Заинтересовались?</h2>
           <p class="visit__description">
@@ -131,32 +131,39 @@
             <br> поездки, и мы покажем вам лучшие 
             <br> предложения гостиниц в Седоне
           </p>
-          <button class="button button--hover button--down button--disabled" type="button">Найти гостиницу</button>
+          <a href="#" class="button button--hover button--down button--disabled">Найти гостиницу</a>
         </div>
         <img class="visit__map" src="img/mobile/map-mobile.jpg" width="320" height="350" alt="Расположение Седоны на карте">
       </section>
     </main>
     <footer class="page-footer">
       <div class="footer-wrapper">
-        <h2 class="page-footer__title">#visitSedona</h2>
-        <ul class="social-list">
-          <li class="social-item">
-            <a class="social-link" href="#">
-              <span class="visually-hidden">Twitter</span>
+        <h2 class="visually-hidden">Подвал сайта</h2>
+        <p class="page-footer__hashtag">#visitSedona</p>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">
+              <span class="visually-hidden">Мы в Twitter</span>
             </a>
           </li>
-          <li class="social-item">
-            <a class="social-link" href="#">
-              <span class="visually-hidden">Facebook</span>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Мы в Facebook</span>
             </a>
           </li>
-          <li class="social-item">
-            <a class="social-link" href="#">
-              <span class="visually-hidden">YouTube</span>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/c/HTMLAcademyRUS">
+              <span class="visually-hidden">Мы в YouTube</span>
             </a>
           </li>
         </ul>
-        <a class="page-footer__developer developer__icon" href="#">Разработано</a>
+        <div class="page-footer__copyright copyright">
+          <p class="pcopyright__text">Разработано</p>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="copyright__icon" src="" alt="Логотип разработчика HtmlAcademy">
+          </a>
+        </div>
+        
       </div>
     </footer>
   </body>
