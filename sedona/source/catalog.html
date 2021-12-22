@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html class="catalog" lang="ru">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фото и Видео</title>
 </head>
-<body class="catalog-body">
-    
-        <header class="catalog-header">
-            <a class="catalog-header__logo" href="index.html">
-              <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип сайта Sedona">
+<body class="page-body">
+        <header class="page-header">
+            <a class="page-header__logo" href="index.html">
+              <img class="page-header__img" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип сайта Sedona">
             </a>
             <nav class="main-nav">
               <button class="main-nav__toggle" type="button">
@@ -34,10 +33,10 @@
               </div>
             </nav>
         </header>
-    <main class="catalog-main">
+    <main class="page-main">
       <h1 class="visually-hidden">Каталог Седоны</h1>
-      <section class="catalog__content">
-        <div class="catalog__wrapper">
+      <section class="catalog">
+        <div class="catalog__content">
           <header class="catalog__header">
             <h2 class="catalog__title">Фото и видео</h2>
             <p class="catalog__descr">Не можете решиться на путешествие
@@ -107,21 +106,21 @@
               </div>
             </li>
           </ul>
-          <div class="catalog__clips clips">
-            <h2 class="clips__title">Все еще сомневаетесь?</h2>
-            <p class="clips__descr">
+          <div class="catalog__video video">
+            <h2 class="video__title">Все еще сомневаетесь?</h2>
+            <p class="video__descr">
               Смотрите видеопрезентацию и
               <br> скорее за билетами, пока они не
               <br> подорожали в очередной раз!
             </p>
-            <video class="clips__item" controls poster="img/mobile/video-mobile.jpg" preload="metadata" width="320" height="201">
+            <video class="video__item" controls poster="img/mobile/video-mobile.jpg" preload="metadata" width="320" height="201">
               <source src="video.mp4" type="video/mp4">
             </video>
           </div>
         </div>
       </section>
     </main>
-    <footer class="catalog-footer footer">
+    <footer class="page-footer footer">
         <div class="footer-wrapper">
           <h2 class="visually-hidden">Мы в соцсетях</h2>
           <p class="footer__hashtag">#visitSedona</p>
