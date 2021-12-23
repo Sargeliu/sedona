@@ -46,67 +46,67 @@
           </header>
           <ul class="gallery__list">
             <li class="gallery__item info">
-              <img class="info__img" src="img/mobile/place-mobile.jpg" width="280" height="280" alt="">
-              <div class="info__content">
-                <h3 class="info__title">Неродные просторы</h3>
-                <p class="info__author">Автор фото: Борис</p>
-                <dl class="info__list">
-                  <div class="info__item">
-                    <dt class="info__likes">
-                      <span class="visually-hidden">Лайки</span>
-                    </dt>
-                    <dd class="info__counter">1350</dd>
-                  </div>
-                </dl>
-              </div>
+              <figure class="info__picture">
+                <img class="info__img" src="img/mobile/place-mobile.jpg" width="280" height="280" alt="">
+                <figcaption class="info__caption">Неродные просторы</figcaption>
+              </figure>
+              <cite class="info__author">Автор фото: Борис</cite>
+              <dl class="info__list">
+                <div class="info__item">
+                  <dt class="info__likes">
+                    <span class="visually-hidden">Лайки</span>
+                  </dt>
+                  <dd class="info__counter">1350</dd>
+                </div>
+              </dl>
             </li>
             <li class="gallery__item info">
-              <img class="info__img" src="img/mobile/nature-mobile.jpg" width="280" height="280" alt="">
-              <div class="info__content">
-                <h3 class="info__title">Местная растительность</h3>
-                <p class="info__author">Автор фото: Сергей</p>
-                <dl class="info__list">
-                  <div class="info__item">
-                    <dt class="info__likes">
-                      <span class="visually-hidden">Лайки</span>
-                    </dt>
-                    <dd class="info__counter">143</dd>
-                  </div>
-                </dl>
-              </div>
+              <figure class="info__picture">
+                <img class="info__img" src="img/mobile/nature-mobile.jpg" width="280" height="280" alt="">
+                <figcaption class="info__caption">Местная растительность</figcaption>
+              </figure>
+              <cite class="info__author">Автор фото: Сергей</cite>
+              <dl class="info__list">
+                <div class="info__item">
+                  <dt class="info__likes">
+                    <span class="visually-hidden">Лайки</span>
+                  </dt>
+                  <dd class="info__counter">143</dd>
+                </div>
+              </dl>
             </li>
             <li class="gallery__item info">
-              <img class="info__img" src="img/mobile/road-mobile.jpg" width="280" height="280" alt="">
-              <div class="info__content">
-                <h3 class="info__title">Дорога на север</h3>
-                <p class="info__author">Автор фото: Петр</p>
-                <dl class="info__list">
-                  <div class="info__item">
-                    <dt class="info__likes">
-                      <span class="visually-hidden">Лайки</span>
-                    </dt>
-                    <dd class="info__counter">96</dd>
-                  </div>
-                </dl>
-              </div>
+              <figure class="info__picture">
+                <img class="info__img" src="img/mobile/road-mobile.jpg" width="280" height="280" alt="">
+                <figcaption class="info__caption">Дорога на север</figcaption>
+              </figure>
+              <cite class="info__author">Автор фото: Петр</cite>
+              <dl class="info__list">
+                <div class="info__item">
+                  <dt class="info__likes">
+                    <span class="visually-hidden">Лайки</span>
+                  </dt>
+                  <dd class="info__counter">96</dd>
+                </div>
+              </dl>
             </li>
             <li class="gallery__item info">
-              <img class="info__img" src="img/mobile/bridge-mobile.jpg" width="280" height="280" alt="">
-              <div class="info__content">
-                <h3 class="info__title">Мост дьявола</h3>
-                <p class="info__author">Автор фото: Антон</p>
-                <dl class="info__list">
-                  <div class="info__item">
-                    <dt class="info__likes">
-                      <span class="visually-hidden">Лайки</span>
-                    </dt>
-                    <dd class="info__counter">254</dd>
-                  </div>
-                </dl>
-              </div>
+              <figure class="info__picture">
+                <img class="info__img" src="img/mobile/bridge-mobile.jpg" width="280" height="280" alt="">
+                <figcaption class="info__caption">Мост дьявола</figcaption>
+              </figure>
+              <cite class="info__author">Автор фото: Антон</cite>
+              <dl class="info__list">
+                <div class="info__item">
+                  <dt class="info__likes">
+                    <span class="visually-hidden">Лайки</span>
+                  </dt>
+                  <dd class="info__counter">254</dd>
+                </div>
+              </dl>
             </li>
           </ul>
-          <div class="gallery__video video">
+          <section class="gallery__video video">
             <h2 class="video__title">Все еще сомневаетесь?</h2>
             <p class="video__descr">
               Смотрите видеопрезентацию и
@@ -116,7 +116,18 @@
             <video class="video__item" controls poster="img/mobile/video-mobile.jpg" preload="metadata" width="320" height="201">
               <source src="video.mp4" type="video/mp4">
             </video>
-          </div>
+            <div class="video__button">
+              <button class="video__button--color video__button--repeat" type="button">
+                <span class="visually-hidden">Повторить видео</span>
+              </button>
+              <button class="video__button--color video__button--subtitles" type="button">
+                <span class="visually-hidden">Включить/отключить субтитры</span>
+              </button>
+              <button class="video__button--color video__button--full-screen" type="button">
+                <span class="visually-hidden">Включить/отключить во весь экран</span>
+              </button>
+            </div>
+          </section>
         </div>
       </section>
     </main>
