@@ -7,7 +7,7 @@
     <title>Sedona - оставьте свой отзыв</title>
 </head>
 
-<body class="page-body">
+<body class="page__body">
     <header class="page-header">
         <a class="page-header__logo" href="index.html">
           <img class="page-header__img" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип сайта Sedona">
@@ -34,95 +34,89 @@
           </div>
         </nav>
     </header>
-    <main class="page-main">
+    <main class="page-main main">
       <h1 class="visually-hidden">Отзывы от посещения Седоны</h1>
       <section class="reviews">
-        <div class="reviews__content">
-          <header class="reviews__header">
-            <h2 class="reviews__title">Оставьте свой отзыв</h2>
-            <p class="reviews__descr">
+        <div class="reviews__wrapper">
+          <header class="main__header">
+            <h2 class="main__title">Оставьте свой отзыв</h2>
+            <p class="main__descr">
               Помогите нашим отелям стать лучше!
               <br> Оставьте отзыв о них, а также о
               <br> посещенных вами
               <br> достопримечательностях
           </p>
           </header>
-          <form class="reviews__form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="group-form full-name-form">
-              <legend class="group-form__headline">Представьтесь:</legend>
-              <label class="group-form__label" for="name">Имя*:</label>
-              <input class="group-form__input" type="text" name="name" id="name" placeholder="Петр" required>
-              <label class="group-form__label" for="surname">Фамилия*:</label>
-              <input class="group-form__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
-              <label class="group-form__label" for="patronymic">Отчество:</label>
-              <input class="group-form__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
-            </fieldset>
-            <fieldset class="group-form contacts-form">
-              <legend class="group-form__headline">Контактная информация:</legend>
-              <label class="group-form__label" for="phone">Контактный телефон*:</label>
-              <div class="contacts-form__box">
-                <input class="group-form__input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
-                <div class="contacts-form__phone"></div>
+          <form class="reviews__form form" action="https://echo.htmlacademy.ru/" method="post">
+            <fieldset class="form__field field">
+              <legend class="field__header">Представьтесь:</legend>
+              <div class="field__content">
+                <label class="field__label" for="name">Имя*:</label>
+                <input class="field__input" type="text" name="name" id="name" placeholder="Петр" required>
               </div>
-              <label class="group-form__label" for="email">Электронная почта*:</label>
-              <div class="contacts-form__box">
-                <input class="group-form__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
-                <div class="contacts-form__email"></div>
+              <div class="field__content">
+                <label class="field__label" for="surname">Фамилия*:</label>
+                <input class="field__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
+              </div>
+              <div class="field__content">
+                <label class="field__label" for="patronymic">Отчество:</label>
+                <input class="field__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
               </div>
             </fieldset>
-            <fieldset class="group-form radio-form">
-              <legend class="group-form__headline">Ваше общее впечатление:</legend>
-              <ul class="radio-form__list">
-                <li class="radio-form__item">
-                  <input class="control-input" type="radio" name="radio-form__group" id="good" checked>
-                  <label class="group-form__label" for="good">Скорее положительное</label>
+            <fieldset class="form__field field">
+              <legend class="field__header">Контактная информация:</legend>
+              <label class="field__label" for="phone">Контактный телефон*:</label>
+              <div class="field__box">
+                <input class="field__input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
+                <div class="field__phone"></div>
+              </div>
+              <label class="field__label" for="email">Электронная почта*:</label>
+              <div class="field__box">
+                <input class="field__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+                <div class="field__email"></div>
+              </div>
+            </fieldset>
+            <fieldset class="form__field field">
+              <legend class="field__header">Ваше общее впечатление:</legend>
+              <ul class="field__list">
+                <li class="field__item field-radio">
+                  <input class="field-radio__input field-radio__input--current" type="radio" name="field-radio" id="positive" checked>
+                  <label class="field__mark" for="positive">Скорее положительное</label>
                 </li>
-                <li class="radio-form__item">
-                  <input class="control-input" type="radio" name="radio-form__group" id="bad">
-                  <label class="group-form__label" for="bad">Скорее отрицательное</label>
+                <li class="field__item field-radio">
+                  <input class="field-radio__input" type="radio" name="field-radio" id="negatively">
+                  <label class="field__mark" for="negatively">Скорее отрицательное</label>
                 </li>
-                <li class="radio-form__item">
-                  <input class="control-input" type="radio" name="radio-form__group" id="difficulty">
-                  <label class="group-form__label" for="difficulty">Затрудняюсь ответить</label>
+                <li class="field__item field-radio">
+                  <input class="field-radio__input" type="radio" name="field-radio" id="difficulty">
+                  <label class="field__mark" for="difficulty">Затрудняюсь ответить</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="group-form checkbox-form">
-              <legend class="group-form__headline">посещенные достопримечательности:</legend>
-              <ul class="checkbox-form__list">
-                <li class="checkbox-form__item">
-                  <label class="control">
-                    <input class="visually-hidden control-input" type="checkbox" name="bridge" checked>
-                    <span class="control__checkbox"></span>
-                    <span>Мост Дьявола</span>
-                  </label>
+            <fieldset class="form__field field">
+              <legend class="field__header">посещенные достопримечательности:</legend>
+              <ul class="field__list">
+                <li class="field__item field-checkbox">
+                    <input class="field-checkbox__input field-checkbox__input--current" type="checkbox" name="bridge" checked>
+                    <label class="field__mark">Мост Дьявола</label>
                 </li>
-                <li class="checkbox-form__item">
-                  <label class="control">
-                    <input class="visually-hidden control-input" type="checkbox" name="mountain" checked>
-                    <span class="control__checkbox"></span>
-                    <span>Гора-Колокол</span>
-                  </label>
+                <li class="field__item field-checkbox">
+                    <input class="field-checkbox__input field-checkbox__input--current" type="checkbox" name="mountain" checked>
+                    <label class="field__mark">Гора-Колокол</label>
                 </li>
-                <li class="checkbox-form__item">
-                  <label class="control">
-                    <input class="visually-hidden control-input" type="checkbox" name="park" checked>
-                    <span class="control__checkbox"></span>
-                    <span>Слайд-парк</span>
-                  </label>
+                <li class="field__item field-checkbox">
+                    <input class="field-checkbox__input field-checkbox__input--current" type="checkbox" name="park" checked>
+                    <label class="field__mark">Слайд-парк</label>
                 </li>
-                <li class="checkbox-form__item">
-                  <label class="control">
-                    <input class="visually-hidden control-input" type="checkbox" name="rock">
-                    <span class="control__checkbox"></span>
-                    <span>Красные скалы</span>
-                  </label>
+                <li class="field__item field-checkbox">
+                    <input class="field-checkbox__input" type="checkbox" name="rock">
+                    <label class="field__mark">Красные скалы</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="group-form textarea-form">
-              <legend class="group-form__headline">Опишите свои эмоции:</legend>
-              <textarea class="textarea-form__descr" name="description" cols="30" rows="10">Опишите подробно все свои восторги </textarea>
+            <fieldset class="form__field field">
+              <legend class="field__header">Опишите свои эмоции:</legend>
+              <textarea class="field__text field__mark" name="description" cols="30" rows="10">Опишите подробно все свои восторги </textarea>
             </fieldset>
             <button class="button button--hover button--down button--disabled" type="submit">Отправить отзыв</button>
           </form>
@@ -157,7 +151,6 @@
               <img class="copyright__icon" src="img/mobile/htmlacademy.svg" width="27" height="34" alt="Логотип HtmlAcademy">
             </a>
           </div>
-
         </div>
       </footer>
 </body>
