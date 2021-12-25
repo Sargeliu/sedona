@@ -1,0 +1,31 @@
+.main-header {
+  text-align: center;
+  text-transform: uppercase;
+}
+.main-header--features {
+  padding-top: 32px;
+  padding-bottom: 11px;
+}
+.main-header--gallery {
+  padding-top: 32px;
+  padding-bottom: 45px;
+}
+.main-header--form {
+  padding-top: 36px;
+  padding-bottom: 16px;
+}
+.main-header__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.main-header__descr {
+  margin: 0;
+  padding-top: 20px;
+}
+.main-header__descr--form {
+  line-height: 24px;
+}
+.main-header__descr--features {
+  padding-top: 44px;
+}

@@ -1,0 +1,21 @@
+.visit {
+  text-transform: uppercase;
+  text-align: center;
+}
+.visit__wrapper {
+  padding: 33px 20px 49px 20px;
+}
+.visit__title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+}
+.visit__descr {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  line-height: 24px;
+}
+.visit__map {
+  display: block;
+}

@@ -1,0 +1,26 @@
+.info {
+  font-size: 14px;
+  line-height: 24px;
+}
+.info__picture {
+  margin: 0;
+}
+.info__img {
+  display: block;
+}
+.info__caption {
+  padding-top: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.info__author {
+  padding-top: 13px;
+  color: #333333;
+  font-style: normal;
+}
+.info__counter {
+  margin: 0;
+  padding-left: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}

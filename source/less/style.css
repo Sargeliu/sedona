@@ -1,0 +1,239 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/ptsans.woff") format("woff"), url("../../fonts/ptsans.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/ptsansbold.woff") format("woff"), url("../../fonts/ptsansbold.woff2") format("woff2");
+  font-display: swap;
+}
+.button {
+  display: block;
+  margin: 0;
+  padding: 14.5px 32px 17.5px 32px;
+  font-size: 21px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #81B3D2;
+  text-transform: uppercase;
+}
+.button--style {
+  border: none;
+}
+.page {
+  height: 100%;
+  font-size: 14px;
+  font-family: "PT Sans", sans-serif;
+  line-height: 26px;
+  font-weight: 400;
+}
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+.main-nav {
+  background-color: #81B3D2;
+}
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+}
+.main-nav__item {
+  list-style: none;
+  text-align: center;
+  height: 55px;
+}
+.main-nav__link {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.main-header {
+  text-align: center;
+  text-transform: uppercase;
+}
+.main-header--features {
+  margin-top: 32px;
+  margin-bottom: 11px;
+}
+.main-header--gallery {
+  padding-top: 32px;
+  padding-bottom: 45px;
+}
+.main-header__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.main-header__descr {
+  margin: 0;
+  padding-top: 20px;
+}
+.main-header__descr--form {
+  line-height: 24px;
+}
+.main-header__descr--features {
+  padding-top: 44px;
+}
+.features__list {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.features__item {
+  list-style: none;
+  background-color: #81B3D2;
+}
+.features__item--color {
+  background-color: #eeeeee;
+}
+.features__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+.features__title--city,
+.features__title--bridge {
+  padding-top: 55px;
+  padding-bottom: 59px;
+}
+.features__title--color {
+  color: #000000;
+  padding-top: 33px;
+}
+.features__descr {
+  margin: 0;
+  line-height: 21px;
+}
+.features__descr--city,
+.features__descr--bridge {
+  padding-bottom: 39px;
+}
+.features__descr--color {
+  color: #000000;
+  padding-top: 59px;
+  padding-bottom: 30px;
+}
+.features__img {
+  display: block;
+}
+.features-city__list {
+  margin: 0;
+  padding: 35px 0 7px 52px;
+  text-align-last: left;
+  background-color: #ffffff;
+}
+.features-city__item {
+  list-style: none;
+}
+.features-city__subtitle {
+  margin: 0;
+  padding-bottom: 24px;
+  font-size: 18px;
+  color: #000000;
+}
+.features-city__descr {
+  width: 211px;
+  margin: 0;
+  padding-bottom: 28px;
+  color: #000000;
+  line-height: 21px;
+}
+.visit {
+  text-transform: uppercase;
+  text-align: center;
+}
+.visit__wrapper {
+  padding: 33px 20px 49px 20px;
+}
+.visit__title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+}
+.visit__descr {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  line-height: 24px;
+}
+.visit__map {
+  display: block;
+}
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 23px;
+}
+.footer__hashtag {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.copyright__text {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.field__list {
+  margin: 0;
+  padding: 0;
+}
+.field__item {
+  list-style: none;
+}
+.field__header {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+.field__label {
+  color: #333333;
+  text-transform: uppercase;
+}
+.field__input {
+  font-weight: 700;
+}
+.field__mark {
+  font-size: 18px;
+  font-weight: 700;
+}
+.info {
+  font-size: 14px;
+  line-height: 24px;
+}
+.info__caption {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.info__author {
+  color: #333333;
+  font-style: normal;
+}
+.info__counter {
+  font-weight: 700;
+  text-transform: uppercase;
+}

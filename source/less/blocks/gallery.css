@@ -1,0 +1,8 @@
+.gallery__list {
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gallery__item {
+  list-style: none;
+}
