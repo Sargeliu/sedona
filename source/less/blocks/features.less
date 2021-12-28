@@ -1,30 +1,33 @@
 .features__list {
-    text-transform: uppercase;
-    color: #ffffff;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  text-transform: uppercase;
+  color: @white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .features__item {
   list-style: none;
-  background-color: @main-color;
+  background-color: @blue;
+
   &--color {
     background-color: #eeeeee;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 .features__title {
-    margin: 0;
-  padding-left: 14px;
-  padding-right: 14px;
+  margin: 0;
   font-size: 18px;
   font-weight: 700;
+
   &--city,
   &--bridge {
     padding-top: 55px;
     padding-bottom: 59px;
   }
+
   &--color {
     color: #000000;
     padding-top: 33px;
@@ -34,12 +37,12 @@
 .features__descr {
   margin: 0;
   line-height: 21px;
-  padding-left: 14px;
-  padding-right: 14px;
+
   &--city,
   &--bridge {
     padding-bottom: 39px;
   }
+
   &--color {
     color: #000000;
     padding-top: 59px;
@@ -56,17 +59,20 @@
     margin: 0;
     padding: 35px 0 7px 52px;
     text-align-last: left;
-    background-color: #ffffff;
+    background-color: @white;
   }
+
   &__item {
     list-style: none;
   }
+
   &__subtitle {
     margin: 0;
     padding-bottom: 24px;
     font-size: 18px;
     color: #000000;
   }
+
   &__descr {
     width: 211px;
     margin: 0;

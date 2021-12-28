@@ -23,7 +23,7 @@ img {
   font-size: 21px;
   font-weight: 700;
   text-decoration: none;
-  color: #ffffff;
+  color: @white;
   background-color: #81B3D2;
   text-transform: uppercase;
 }
@@ -44,7 +44,7 @@ img {
   min-width: 320px;
   min-height: 100%;
   margin: 0;
-  background-color: #ffffff;
+  background-color: @white;
   color: #000000;
 }
 .main-nav {
@@ -60,7 +60,7 @@ img {
   height: 55px;
 }
 .main-nav__link {
-  color: #ffffff;
+  color: @white;
   font-size: 18px;
   font-weight: 700;
   line-height: 40px;
@@ -96,7 +96,7 @@ img {
 }
 .features__list {
   text-transform: uppercase;
-  color: #ffffff;
+  color: @white;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -142,7 +142,7 @@ img {
   margin: 0;
   padding: 35px 0 7px 52px;
   text-align-last: left;
-  background-color: #ffffff;
+  background-color: @white;
 }
 .features-city__item {
   list-style: none;
