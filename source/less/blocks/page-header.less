@@ -1,11 +1,16 @@
-.page-main {
-  background-image: url("../../img/mobile/header-big.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  padding-top: 389px;
+.page-header {
+  display: flex;
+  flex-direction: column;
 
-  &--img {
-    background-image: url("../../img/mobile/header-small.jpg");
-    padding-top: 250px;
+  &__logo {
+    height: 84px;
+
+    @media (min-width: @tablet-width) {
+      height: 84px;
+    }
+
+    @madia (min-width: @desktop-width) {
+      height: 97px;
+    }
   }
 }
