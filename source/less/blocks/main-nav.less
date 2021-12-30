@@ -21,3 +21,34 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    background-color: #ffffff;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__wrapper {
+    padding-left: 49px;
+    padding-right: 27px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__link {
+    color: #000000;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    padding-left: 91px;
+    padding-right: 71px;
+  }
+}

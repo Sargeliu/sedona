@@ -1,19 +1,20 @@
-.features__list {
-  text-transform: uppercase;
-  color: @white;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  background-color: @blue;
+.features {
+  &__list {
+    margin: 0;
+    padding: 0;
+    color: @white;
+    text-align: center;
+    background-color: @blue;
+    list-style: none;
+    text-transform: uppercase;
 
-  &--row {
-    background-color: #eeeeee;
+    &--row {
+      background-color: #eeeeee;
+    }
   }
 }
 
 .features__item {
-  list-style: none;
-
   &--color {
     padding-left: 20px;
     padding-right: 20px;
@@ -65,5 +66,19 @@
 
   .features__item--color {
     padding: 0;
+  }
+
+  .features__box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    &--bridge {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  .features__img--bridge {
+    grid-row-start: 1;
+    grid-column-start: 1;
   }
 }
