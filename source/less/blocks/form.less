@@ -9,52 +9,19 @@
   }
 }
 
-.legend {
-  display: none;
-}
-
 @media (min-width: @tablet-width) {
-  .legend {
-    display: block;
-  }
-
   .form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, min-content);
-    grid-template-areas:
-    "impression name"
-    "contacts contacts"
-    "attraction attraction"
-    "description description"
-    "button legend";
-  }
+    grid-template-rows: repeat(4, min-content);
 
-  .field-name {
-    grid-area: name;
-  }
+    &__field--l {
+      grid-column: 1 / -1;
+    }
 
-  .field-impression {
-    grid-area: impression;
-  }
-
-  .field-contacts {
-    grid-area: contacts;
-  }
-
-  .field-attraction {
-    grid-area: attraction;
-  }
-
-  .field-description {
-    grid-area: description;
-  }
-
-  .field-button {
-    grid-area: button;
-  }
-
-  .legend {
-    grid-area: legend;
+    &__field--s {
+      grid-row: 1 / 2;
+      grid-column: 2 / -1;
+    }
   }
 }
