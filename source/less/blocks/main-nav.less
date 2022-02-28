@@ -1,26 +1,121 @@
 .main-nav {
+  position: relative;
+  width: auto;
+  min-height: 56px;
   background-color: @blue;
 }
 
 .main-nav__list {
   margin: 0;
   padding: 0;
-}
-
-.main-nav__item {
   list-style: none;
-  text-align: center;
-  height: 55px;
 }
 
 .main-nav__link {
+  position: relative;
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 19px;
   color: @white;
   font-size: 18px;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
+  border-top: 1px solid #678fa8;
+  border-bottom: 1px solid #9ac2db;
 }
+
+.main-nav__toggle {
+  position: absolute;
+  padding: 0;
+  top: -70px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 70px;
+  height: 55px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 23px;
+  height: 4px;
+  background-color: @blue;
+  box-shadow: 0 8px 0 0 @blue, 0 16px 0 0 @blue;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(#ffffff, 60%);
+  box-shadow:
+    0 8px 0 0 fade(#ffffff, 60%),
+    0 16px 0 0 fade(#ffffff, 60%);
+}
+
+
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    width: 23px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#ffffff, 60%);
+  }
+}
+
+// @media (max-width: @mobile-width-only) {
+//   .main-nav--closed .site-list__item {
+//     display: none;
+//   }
+
+//   .main-nav--opened .main-nav__wrapper {
+//     position: absolute;
+//     width: 100%;
+//     top: 0;
+//     z-index: 10;
+//     background-color: @blue;
+//   }
+
+//   .main-nav--opened .main-nav__wrapper::before {
+//     content: "";
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     z-index: 2;
+//     width: 100%;
+//     height: 7px;
+//     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+//   }
+
+//   .main-nav--nojs .main-nav__toggle {
+//     display: none;
+//   }
+// }
 
 @media (min-width: @tablet-width) {
   .main-nav {
@@ -34,15 +129,6 @@
   .main-nav__wrapper {
     padding-left: 49px;
     padding-right: 27px;
-  }
-
-  .main-nav__list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .main-nav__link {
-    color: #000000;
   }
 }
 
