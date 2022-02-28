@@ -1,16 +1,16 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 
   &__logo {
     height: 84px;
+  }
 
-    @media (min-width: @tablet-width) {
-      height: 84px;
-    }
-
-    @madia (min-width: @desktop-width) {
-      height: 97px;
-    }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
   }
 }
