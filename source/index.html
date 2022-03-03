@@ -17,19 +17,19 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="gallery.html">Фото и видео</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Форма отзыва</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
-            </li>
-          </ul>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active">Главная</a>
+          </li>
+          <li class="main-nav__item main-nav--mr">
+            <a class="main-nav__link" href="gallery.html">Фото и видео</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main class="page-main">
@@ -158,5 +158,22 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
