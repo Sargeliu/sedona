@@ -2,85 +2,67 @@
   &__list {
     margin: 0;
     padding: 0;
-    color: @white;
-    text-align: center;
-    background-color: @blue;
-    list-style: none;
+    list-style-type: none;
     text-transform: uppercase;
-
-    &--row {
-      background-color: #eeeeee;
-    }
-  }
-}
-
-.features__item {
-  &--color {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-.features__title {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-
-  &--city,
-  &--bridge {
-    padding-top: 55px;
-    padding-bottom: 59px;
   }
 
-  &--color {
-    color: #000000;
-    padding-top: 33px;
-  }
-}
-
-.features__descr {
-  margin: 0;
-  line-height: 21px;
-
-  &--city,
-  &--bridge {
-    padding-bottom: 39px;
-  }
-
-  &--color {
-    color: #000000;
-    padding-top: 59px;
-    padding-bottom: 30px;
-  }
-}
-
-.features__img {
-  display: block;
-}
-
-@media (min-width: @tablet-width) {
-  .features__list--row {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 36px 11px 36px;
-  }
-
-  .features__item--color {
-    padding-left: 7px;
-    padding-right: 7px;
-  }
-
-  .features__box {
+  &__sedona {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    row-gap: 26px;
+    padding: 35px 0;
+    background-color: @white;
+  }
 
-    &--bridge {
-      grid-template-columns: 2fr 1fr;
+  &__item {
+    background-color: @blue;
+
+    &--white {
+      background-color: @white;
+    }
+
+    &--grey {
+      background-color: @grey;
+    }
+
+    &--grey:not(:last-child) {
+      border-bottom: 1px solid #d6d6d6;
     }
   }
 
-  .features__img--bridge {
-    grid-row-start: 1;
-    grid-column-start: 1;
+  &__title {
+    margin: 0;
+    padding-top: 34px;
+    padding-bottom: 60px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+
+    &--white {
+      color: @white;
+    }
   }
+
+  &__descr {
+    margin: 0;
+    padding-bottom: 34px;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+
+    &--white {
+      color: @white;
+    }
+  }
+
+  &__img {
+    display: block;
+  }
+}
+
+.features__item--white>.features__descr,
+.features__item--white>.features__title {
+  padding: 0;
+  padding-left: 70px;
+  text-align: left;
 }

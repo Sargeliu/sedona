@@ -105,7 +105,7 @@ img {
   list-style: none;
   background-color: #81B3D2;
 }
-.features__item--color {
+.features__item--white {
   background-color: #eeeeee;
 }
 .features__title {
@@ -118,7 +118,7 @@ img {
   padding-top: 55px;
   padding-bottom: 59px;
 }
-.features__title--color {
+.features__title--white {
   color: #000000;
   padding-top: 33px;
 }
@@ -130,7 +130,7 @@ img {
 .features__descr--bridge {
   padding-bottom: 39px;
 }
-.features__descr--color {
+.features__descr--white {
   color: #000000;
   padding-top: 59px;
   padding-bottom: 30px;
