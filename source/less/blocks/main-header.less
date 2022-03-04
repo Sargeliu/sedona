@@ -26,6 +26,12 @@
   margin: 0;
   font-size: 18px;
   font-weight: 700;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .main-header__descr {
