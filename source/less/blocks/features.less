@@ -56,7 +56,26 @@
   }
 
   &__img {
-    display: block;
+    width: 320px;
+    height: 260px;
+    background-color: @blue;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+
+    &--town {
+      background-image: url("../../img/mobile/town-mobile.jpg");
+
+      @media (min-width: @tablet-width) {
+        width: 512px;
+        height: 256px;
+        background-image: url("../../img/tablet/town-tablet.jpg");
+      }
+    }
+
+    &--bridge {
+      background-image: url("../../img/mobile/bridge-mobile.jpg");
+    }
   }
 }
 
