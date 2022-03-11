@@ -1,31 +1,55 @@
 .features {
+  &__block {
+    background-color: @blue;
+
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 33% 67%;
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+  }
+
   &__list {
     margin: 0;
     padding: 0;
     list-style-type: none;
     text-transform: uppercase;
-  }
 
-  &__sedona {
-    display: grid;
-    row-gap: 26px;
-    padding: 35px 0;
-    background-color: @white;
-  }
-
-  &__item {
-    background-color: @blue;
-
-    &--white {
+    &--sedona {
+      display: grid;
+      row-gap: 26px;
+      padding: 35px 0;
       background-color: @white;
     }
 
-    &--grey {
+    &--place {
+      padding: 0 20px;
       background-color: @grey;
+
+      @media (min-width: @tablet-width) {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        justify-content: center;
+      }
+
+    }
+  }
+
+  &__item {
+    &--sedona {
+      background-color: @white;
     }
 
-    &--grey:not(:last-child) {
+    &--place:not(:last-child) {
       border-bottom: 1px solid #d6d6d6;
+
+      @media (min-width: @tablet-width) {
+        border: none;
+      }
     }
   }
 
@@ -38,7 +62,7 @@
     font-weight: 700;
     text-align: center;
 
-    &--white {
+    &--color {
       color: @white;
     }
   }
@@ -50,13 +74,12 @@
     line-height: 21px;
     text-align: center;
 
-    &--white {
+    &--color {
       color: @white;
     }
   }
 
   &__img {
-    width: 320px;
     height: 260px;
     background-color: @blue;
     background-repeat: no-repeat;
@@ -67,20 +90,32 @@
       background-image: url("../../img/mobile/town-mobile.jpg");
 
       @media (min-width: @tablet-width) {
-        width: 512px;
         height: 256px;
         background-image: url("../../img/tablet/town-tablet.jpg");
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 800px;
+        background-image: url("../../img/desktop/town-desktop.jpg");
       }
     }
 
     &--bridge {
       background-image: url("../../img/mobile/bridge-mobile.jpg");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../../img/tablet/bridge-tablet.jpg");
+      }
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../../img/desktop/bridge-desktop.jpg");
+      }
     }
   }
 }
 
-.features__item--white>.features__descr,
-.features__item--white>.features__title {
+.features__item--sedona>.features__descr,
+.features__item--sedona>.features__title {
   padding: 0;
   padding-left: 70px;
   text-align: left;
