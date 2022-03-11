@@ -8,8 +8,20 @@
     }
   }
 
+  &__block--bridge {
+    @media (min-width: @tablet-width) {
+      grid-template-columns: 67% 33%;
+    }
+  }
+
   &__text {
     text-transform: uppercase;
+
+    &--bridge {
+      @media (min-width: @tablet-width) {
+        order: 2;
+      }
+    }
   }
 
   &__list {
@@ -23,6 +35,10 @@
       row-gap: 26px;
       padding: 35px 0;
       background-color: @white;
+
+      @media (min-width: @tablet-width) {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     &--place {
@@ -31,24 +47,33 @@
 
       @media (min-width: @tablet-width) {
         padding: 0;
-        display: grid;
-        grid-template-columns: repeat(3, 33%);
-        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
       }
-
     }
   }
 
   &__item {
     &--sedona {
       background-color: @white;
+      padding-left: 70px;
+
+      @media (min-width: @tablet-width) {
+        padding: 0;
+        width: 33%;
+      }
+    }
+
+    &--place {
+      @media (min-width: @tablet-width) {
+        width: 33%;
+      }
     }
 
     &--place:not(:last-child) {
-      border-bottom: 1px solid #d6d6d6;
-
-      @media (min-width: @tablet-width) {
-        border: none;
+      @media (max-width: @mobile-width-only) {
+        border-bottom: 1px solid #d6d6d6;
       }
     }
   }
@@ -117,6 +142,5 @@
 .features__item--sedona>.features__descr,
 .features__item--sedona>.features__title {
   padding: 0;
-  padding-left: 70px;
   text-align: left;
 }
