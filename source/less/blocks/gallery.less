@@ -1,24 +1,39 @@
 .gallery {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-}
 
-.gallery {
+  &__wrapper {
+    padding: 0 20px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 60px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
+    }
+  }
+
   &__list {
     margin: 0;
     padding: 0;
+    display: grid;
+    row-gap: 20px;
+    justify-content: center;
+
+    @media (min-width: @tablet-width) {
+      gap: 0;
+    }
   }
 
   &__item {
     list-style: none;
-    padding: 22px 20px 22px 20px;
     border-bottom: 1px solid #e5e5e5;
   }
 }
 
 @media (min-width: @tablet-width) {
   .gallery__list {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
