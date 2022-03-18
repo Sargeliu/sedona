@@ -47,9 +47,8 @@
 
       @media (min-width: @tablet-width) {
         padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   }
@@ -105,37 +104,8 @@
   }
 
   &__img {
-    height: 260px;
-    background-color: @blue;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-
-    &--town {
-      background-image: url("../../img/mobile/town-mobile.jpg");
-
-      @media (min-width: @tablet-width) {
-        height: 256px;
-        background-image: url("../../img/tablet/town-tablet.jpg");
-      }
-
-      @media (min-width: @desktop-width) {
-        width: 800px;
-        background-image: url("../../img/desktop/town-desktop.jpg");
-      }
-    }
-
-    &--bridge {
-      background-image: url("../../img/mobile/bridge-mobile.jpg");
-
-      @media (min-width: @tablet-width) {
-        background-image: url("../../img/tablet/bridge-tablet.jpg");
-      }
-
-      @media (min-width: @desktop-width) {
-        background-image: url("../../img/desktop/bridge-desktop.jpg");
-      }
-    }
+    display: block;
+    width: 100%;
   }
 }
 
