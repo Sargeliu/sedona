@@ -10,7 +10,7 @@
 <body class="page__body">
     <header class="page-header">
       <nav class="main-nav main-nav--opened main-nav--nojs">
-        <a class="main-nav__logo">
+        <a class="main-nav__logo" href="index.html">
           <img class="main-nav__img" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип сайта Sedona">
         </a>
         <button class="main-nav__toggle" type="button">
@@ -31,11 +31,10 @@
           </li>
         </ul>
       </nav>
+       <div class="page-header__gallery-img">
+        <img class="page-header__sedona-title" src="img/mobile/sedona.svg" width="229" height="39" alt="Sedona">
+      </div>
     </header>
-
-    <div class="page-header__gallery-img">
-      <img class="page-header__sedona-title" src="img/mobile/sedona.svg" width="229" height="39" alt="Sedona">
-    </div>
 
     <main class="page-main page-main--img">
       <h1 class="visually-hidden">Галерея Седоны</h1>
@@ -110,7 +109,8 @@
               </dl>
             </li>
           </ul>
-          <section class="gallery__video video">
+        </div>
+        <section class="gallery__video video">
             <header class="video__header">
               <h2 class="main-header__title">Все еще сомневаетесь?</h2>
               <p class="main-header__descr">
@@ -134,54 +134,53 @@
               </button>
             </div>
           </section>
-        </div>
       </section>
     </main>
     <footer class="page-footer footer">
-        <div class="footer-wrapper">
-          <h2 class="visually-hidden">Мы в соцсетях</h2>
-          <p class="footer__hashtag">#visitSedona</p>
-          <ul class="socials">
-            <li class="socials__item">
-              <a class="socials__link socials__link--twitter" href="https://twitter.com/htmlacademy_ru">
-                <span class="visually-hidden">Мы в Twitter</span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy">
-                <span class="visually-hidden">Мы в Facebook</span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--youtube" href="https://www.youtube.com/c/HTMLAcademyRUS">
-                <span class="visually-hidden">Мы в YouTube</span>
-              </a>
-            </li>
-          </ul>
-          <div class="footer__copyright copyright">
-            <p class="copyright__text">Разработано</p>
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <img class="copyright__icon" src="img/mobile/htmlacademy.svg" width="27" height="34" alt="Логотип HtmlAcademy">
+      <div class="footer__wrapper">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
+        <p class="footer__hashtag">#visitSedona</p>
+        <ul class="socials">
+          <li class="socials__item">
+            <a class="socials__link socials__link--twitter" href="https://twitter.com/htmlacademy_ru">
+              <span class="visually-hidden">Мы в Twitter</span>
             </a>
-          </div>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Мы в Facebook</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--youtube" href="https://www.youtube.com/c/HTMLAcademyRUS">
+              <span class="visually-hidden">Мы в YouTube</span>
+            </a>
+          </li>
+        </ul>
+        <div class="footer__copyright copyright">
+          <p class="copyright__text">Разработано</p>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="copyright__icon" src="img/mobile/htmlacademy.svg" width="27" height="34" alt="Логотип HtmlAcademy">
+          </a>
         </div>
-      </footer>
+      </div>
+    </footer>
 
-      <script>
-        var navMain = document.querySelector('.main-nav');
-        var navToggle = document.querySelector('.main-nav__toggle');
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
 
-        navMain.classList.remove('main-nav--nojs');
+      navMain.classList.remove('main-nav--nojs');
 
-        navToggle.addEventListener('click', function() {
-          if (navMain.classList.contains('main-nav--closed')) {
-            navMain.classList.remove('main-nav--closed');
-            navMain.classList.add('main-nav--opened');
-          } else {
-            navMain.classList.add('main-nav--closed');
-            navMain.classList.remove('main-nav--opened');
-          }
-        });
-      </script>
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
 </body>
 </html>
