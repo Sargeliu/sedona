@@ -11,7 +11,7 @@
 <body class="page__body">
     <header class="page-header">
       <nav class="main-nav main-nav--opened main-nav--nojs">
-        <a class="main-nav__logo">
+        <a class="main-nav__logo" href="index.html">
           <img class="main-nav__img" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип сайта Sedona">
         </a>
         <button class="main-nav__toggle" type="button">
@@ -32,35 +32,34 @@
           </li>
         </ul>
       </nav>
+      <div class="page-header__form-img">
+        <img class="page-header__sedona-title" src="img/mobile/sedona.svg" width="229" height="39" alt="Sedona">
+      </div>
     </header>
-    <main class="page-main page-main--img">
+
+    <main class="page-main">
       <h1 class="visually-hidden">Отзывы от посещения Седоны</h1>
       <section class="reviews">
         <div class="reviews__wrapper">
           <header class="main-header main-header--form">
             <h2 class="main-header__title">Оставьте свой отзыв</h2>
-            <p class="main-header__descr main-header__descr--form">
-              Помогите нашим отелям стать лучше!
-              <br> Оставьте отзыв о них, а также о
-              <br> посещенных вами
-              <br> достопримечательностях
-          </p>
+            <p class="main-header__descr main-header__descr--form">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </header>
           <form class="reviews__form form" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="form__field form__field--s field">
               <legend class="field__header field__header--padding">Представьтесь:</legend>
-              <div class="field__content">
+              <p class="field__group">
                 <label class="field__label" for="name">Имя*:</label>
                 <input class="field__input" type="text" name="name" id="name" placeholder="Петр" required>
-              </div>
-              <div class="field__content">
+              </p>
+              <p class="field__group">
                 <label class="field__label" for="surname">Фамилия*:</label>
                 <input class="field__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
-              </div>
-              <div class="field__content">
+              </p>
+              <p class="field__group">
                 <label class="field__label" for="patronymic">Отчество:</label>
                 <input class="field__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
-              </div>
+              </p>
             </fieldset>
             <fieldset class="form__field form__field--l field">
               <legend class="field__header">Контактная информация:</legend>
