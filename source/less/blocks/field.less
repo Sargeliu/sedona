@@ -10,6 +10,11 @@
     list-style: none;
   }
 
+  &__group {
+    display: flex;
+    margin: 0;
+  }
+
   &__header {
     font-size: 18px;
     font-weight: 700;
@@ -17,11 +22,6 @@
     text-transform: uppercase;
     padding-top: 20px;
     padding-bottom: 19px;
-  }
-
-  &__content,
-  &__box {
-    padding-left: 20px;
   }
 
   &__label {
@@ -39,6 +39,7 @@
     line-height: 26px;
     font-weight: 700;
     padding: 18px 22px 14px 22px;
+    box-sizing: border-box;
   }
 
   &__mark {
