@@ -2,12 +2,30 @@
   padding: 0;
 
   &__list {
+    list-style-type: none;
     margin: 0;
     padding: 0;
+
+    &--checkbox {
+      display: grid;
+      grid-template-rows: repeat(4, 56px);
+      row-gap: 44px;
+
+      @media (min-width: @tablet-width) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 56px);
+      }
+
+      @media (min-width: @desktop-width) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 56px;
+      }
+    }
   }
 
   &__item {
-    list-style: none;
+    height: 56px;
   }
 
   &__group {
@@ -35,10 +53,16 @@
   }
 
   &__input {
+    width: 100%;
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
     padding: 18px 22px 14px 22px;
+    box-sizing: border-box;
+  }
+
+  &__text {
+    width: 100%;
     box-sizing: border-box;
   }
 
