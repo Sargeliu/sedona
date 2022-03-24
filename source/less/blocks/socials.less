@@ -1,0 +1,42 @@
+.socials {
+  margin: 0;
+  padding: 33px 0 40px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 46px);
+  justify-content: center;
+  column-gap: 6px;
+  list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    display: block;
+    width: 46px;
+    height: 48px;
+    background-color: @blue;
+
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:focus .socials__icon {
+      fill-opacity: 0.3;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    fill: #ffffff;
+  }
+}
