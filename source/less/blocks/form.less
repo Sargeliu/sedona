@@ -1,10 +1,24 @@
 .form {
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+  }
+
   &__field {
-    display: flex;
-    flex-direction: column;
     margin: 0;
     padding-bottom: 25px;
     border: none;
+  }
+
+  &__start {
+    @media (max-width: @mobile-width-only) {
+      display: none;
+    }
   }
 }
 
@@ -12,15 +26,39 @@
   .form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, min-content);
+    grid-template-rows: repeat(5, min-content);
+    grid-template-areas:
+      "radio name"
+      "contacts contacts"
+      "checkbox checkbox"
+      "textarea textarea"
+      "button start";
+  }
 
-    &__field--l {
-      grid-column: 1 / -1;
+  .field {
+    &--name {
+      grid-area: name;
     }
 
-    &__field--s {
-      grid-row: 1 / 2;
-      grid-column: 2 / -1;
+    &--contacts {
+      grid-area: contacts;
+
+      @media (min-width: @desktop-width) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &--radio {
+      grid-area: radio;
+    }
+
+    &--checkbox {
+      grid-area: checkbox;
+    }
+
+    &--textarea {
+      grid-area: textarea;
     }
   }
 }
