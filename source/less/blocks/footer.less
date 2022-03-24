@@ -13,8 +13,11 @@
   }
 
   &__copyright {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    column-gap: 13px;
     justify-content: center;
+    align-items: center;
   }
 
   &__wrapper {
@@ -24,10 +27,12 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
 
     @media (min-width: @desktop-width) {
-      padding: 0;
+      padding-left: 120px;
+      padding-right: 120px;
     }
   }
 }
