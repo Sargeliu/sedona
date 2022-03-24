@@ -1,0 +1,28 @@
+.control {
+  display: flex;
+  align-items: center;
+  position: relative;
+  display: block;
+  padding-left: 75px;
+
+  &__mark {
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    width: 46px;
+    height: 46px;
+    border-radius: 1px;
+    background-color: @grey;
+    outline: 5px solid @grey;
+  }
+}
+
+.control:hover .control__mark {
+  background-color: #e5e5e5;
+  outline: 5px solid #e5e5e5;
+}
+
+.control:focus .control__mark {
+  background-color: #d5d5d5;
+  outline: 5px solid #d5d5d5;
+}
