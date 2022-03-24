@@ -14,15 +14,48 @@
     border-radius: 1px;
     background-color: @grey;
     outline: 5px solid @grey;
+
+    &--radio {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+  }
+
+  &__label {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
   }
 }
+
 
 .control:hover .control__mark {
   background-color: #e5e5e5;
   outline: 5px solid #e5e5e5;
 }
 
-.control:focus .control__mark {
+.control__input:focus .control__mark {
   background-color: #d5d5d5;
   outline: 5px solid #d5d5d5;
+}
+
+.control__input[type="checkbox"]:checked+.control__mark {
+  background-image: url("../../img/svg/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control__input[type="checkbox"]:checked+.control__mark:focus {
+  background-image: url("../../img/svg/tick-down.svg");
+}
+
+.control__input[type="radio"]:checked+.control__mark {
+  background-image: url("../../img/svg/shape.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control__input[type="radio"]:checked+.control__mark:focus {
+  background-image: url("../../img/svg/shape-down.svg");
 }
