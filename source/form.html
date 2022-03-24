@@ -46,8 +46,8 @@
             <p class="main-header__descr main-header__descr--form">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </header>
           <form class="reviews__form form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="form__field form__field--s field">
-              <legend class="field__header field__header--padding">Представьтесь:</legend>
+            <fieldset class="form__field field field--name">
+              <legend class="field__header">Представьтесь:</legend>
               <p class="field__group">
                 <label class="field__label" for="name">Имя*:</label>
                 <input class="field__input" type="text" name="name" id="name" placeholder="Петр" required>
@@ -61,20 +61,24 @@
                 <input class="field__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
               </p>
             </fieldset>
-            <fieldset class="form__field form__field--l field">
+            <fieldset class="form__field field field--contacts">
               <legend class="field__header">Контактная информация:</legend>
-              <label class="field__label field__label--contacts" for="phone">Контактный телефон*:</label>
-              <div class="field__box">
-                <input class="field__input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
-                <div class="field__phone field__phone--icon"></div>
+              <div class="field__group field__group--checkbox">
+                <label class="field__label field__label--contacts" for="phone">Контактный телефон*:</label>
+                <div class="field__box">
+                  <input class="field__input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
+                  <div class="field__phone field__phone--icon"></div>
+                </div>
               </div>
-              <label class="field__label field__label--contacts" for="email">Электронная почта*:</label>
-              <div class="field__box">
-                <input class="field__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
-                <div class="field__email field__email--icon"></div>
+              <div class="field__group field__group--checkbox">
+                <label class="field__label field__label--contacts" for="email">Электронная почта*:</label>
+                <div class="field__box">
+                  <input class="field__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+                  <div class="field__email field__email--icon"></div>
+                </div>
               </div>
             </fieldset>
-            <fieldset class="form__field form__field--s field">
+            <fieldset class="form__field field field--radio">
               <legend class="field__header">Ваше общее впечатление:</legend>
               <ul class="field__list">
                 <li class="field__item field-radio">
@@ -91,67 +95,84 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__field form__field--l field">
+            <fieldset class="form__field field field--checkbox">
               <legend class="field__header">Посещенные достопримечательности:</legend>
-              <ul class="field__list">
-                <li class="field__item field-checkbox">
-                    <input class="field-checkbox__input" type="checkbox" name="bridge" checked>
-                    <label class="field__mark">Мост Дьявола</label>
+              <ul class="field__list field__list--checkbox">
+                <li class="field-checkbox">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="checkbox" name="devil's-bridge" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label">Мост Дьявола</span>
+                  </label>
                 </li>
-                <li class="field__item field-checkbox">
-                    <input class="field-checkbox__input" type="checkbox" name="mountain" checked>
-                    <label class="field__mark">Гора-Колокол</label>
+                <li class="field-checkbox">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="checkbox" name="mount-bell" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label">Гора-Колокол</span>
+                  </label>
                 </li>
-                <li class="field__item field-checkbox">
-                    <input class="field-checkbox__input" type="checkbox" name="park" checked>
-                    <label class="field__mark">Слайд-парк</label>
+                <li class="field-checkbox">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="checkbox" name="slide-park" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label">Слайд-парк</span>
+                  </label>
                 </li>
-                <li class="field__item field-checkbox">
-                    <input class="field-checkbox__input" type="checkbox" name="rock">
-                    <label class="field__mark">Красные скалы</label>
+                <li class="field-checkbox">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="checkbox" name="red-rocks" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label">Красные скалы</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__field form__field--l field">
+            <fieldset class="form__field field field--textarea">
               <legend class="field__header">Опишите свои эмоции:</legend>
               <label class="visually-hidden" for="description">Опишите cвои восторги</label>
               <textarea class="field__text field__mark" name="description" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
             </fieldset>
-            <button class="button button--style button--hover button--down button--disabled" type="submit">Отправить отзыв</button>
+            <button class="button button--form button--style button--hover button--down button--disabled" type="submit">Отправить отзыв</button>
+            <p class="form__start">* — обязательные поля</p>
           </form>
         </div>
       </section>
     </main>
 
     <footer class="page-footer footer">
-        <div class="footer-wrapper">
-          <h2 class="visually-hidden">Мы в соцсетях</h2>
-          <p class="footer__hashtag">#visitSedona</p>
-          <ul class="socials">
-            <li class="socials__item">
-              <a class="socials__link socials__link--twitter" href="https://twitter.com/htmlacademy_ru">
-                <span class="visually-hidden">Мы в Twitter</span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy">
-                <span class="visually-hidden">Мы в Facebook</span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--youtube" href="https://www.youtube.com/c/HTMLAcademyRUS">
-                <span class="visually-hidden">Мы в YouTube</span>
-              </a>
-            </li>
-          </ul>
-          <div class="footer__copyright copyright">
-            <p class="copyright__text">Разработано</p>
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <img class="copyright__icon" src="img/mobile/htmlacademy.svg" width="27" height="34" alt="Логотип HtmlAcademy">
+      <div class="footer__wrapper">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
+        <p class="footer__hashtag">#visitSedona</p>
+        <ul class="socials">
+          <li class="socials__item">
+            <a class="socials__link socials__link--twitter" href="https://twitter.com/htmlacademy_ru">
+              <svg class="socials__icon" aria-hidden="true" focusable="false" width="18" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Мы в Twitter"><path d="M11.3.17c1.7-.5 3.1.2 3.7 1.1.7-.2 1.4-.5 2.1-.7 0 .8-.5 1.5-.9 1.7.7.2 1.3-.5 1.3-.5-.2 1-1 1.7-1.6 2-.2 6.6-3.3 11-10.4 10.8H5c-.4 0-4.3-.4-5-1.8 2.3.2 4-.4 4.8-1.1-1-.3-2.8-.5-3.1-2.9.4.1.6.2 1.3.1-1.2-.8-2.6-1.5-2.5-3.7.3.3 1.1.5 1.4.5-.7-.2-2-3.3-.9-4.8 1.9 1.8 3.8 3.5 7.4 3.7.1-2.3 1.1-3.8 2.9-4.4Z"/></svg>
+              <span class="visually-hidden">Мы в Twitter</span>
             </a>
-          </div>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy">
+              <svg class="socials__icon" aria-hidden="true" focusable="false" width="9" height="19" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Мы в Facebook"><path d="M6.3 3.4h2.4V0H5.8C2.7.2 1.5 2.4 1.9 6.1H0v3.5h2v9.3h3.8V9.6h2.9V6.1H5.8c0-1 0-2.4.5-2.7Z"/></svg>
+              <span class="visually-hidden">Мы в Facebook</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--youtube" href="https://www.youtube.com/c/HTMLAcademyRUS">
+              <svg class="socials__icon" aria-hidden="true" focusable="false" width="20" height="14" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Мы в YouTube"><path d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8v8.3C0 12.7 1.3 14 2.8 14h14.3c1.6 0 2.8-1.3 2.8-2.8V2.8C20 1.3 18.7 0 17.1 0ZM7 10.4V3.6L13.8 7 7 10.4Z"/></svg>
+              <span class="visually-hidden">Мы в YouTube</span>
+            </a>
+          </li>
+        </ul>
+        <div class="footer__copyright copyright">
+          <p class="copyright__text">Разработано</p>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="copyright__icon" aria-hidden="true" focusable="false" width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HtmlAcademy"><path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z"/></svg>
+            <span class="visually-hidden">Школа HTMLAcademy</span>
+          </a>
         </div>
-      </footer>
+      </div>
+    </footer>
 
       <script>
         var navMain = document.querySelector('.main-nav');
