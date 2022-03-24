@@ -4,13 +4,29 @@
   padding: 14.5px 32px 17.5px 32px;
   font-size: 21px;
   font-weight: 700;
-  text-decoration: none;
   color: @white;
   background-color: @blue;
   text-transform: uppercase;
   box-sizing: border-box;
 
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:focus {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+
   &--style {
     border: none;
+  }
+
+  &--form {
+    width: 100%;
   }
 }
