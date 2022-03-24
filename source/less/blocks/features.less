@@ -33,7 +33,7 @@
     &--sedona {
       display: grid;
       row-gap: 26px;
-      padding: 35px 0;
+      padding: 26px 0 40px 0;
       background-color: @white;
 
       @media (min-width: @tablet-width) {
@@ -54,19 +54,14 @@
   }
 
   &__item {
+    position: relative;
+
     &--sedona {
       background-color: @white;
       padding-left: 70px;
 
       @media (min-width: @tablet-width) {
         padding: 0;
-        width: 33%;
-      }
-    }
-
-    &--place {
-      @media (min-width: @tablet-width) {
-        width: 33%;
       }
     }
 
@@ -75,12 +70,46 @@
         border-bottom: 1px solid #d6d6d6;
       }
     }
+
+    &--housing::after,
+    &--food::after,
+    &--gift::after {
+      content: "";
+      width: 40px;
+      height: 38px;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        width: 76px;
+        height: 75px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+      }
+    }
+
+    &--housing::after {
+      background-image: url("../../img/svg/house.svg");
+    }
+
+    &--food::after {
+      background-image: url("../../img/svg/burger.svg");
+    }
+
+    &--gift::after {
+      background-image: url("../../img/svg/gift.svg");
+    }
   }
 
   &__title {
+    position: relative;
     margin: 0;
     padding-top: 34px;
-    padding-bottom: 60px;
+    padding-bottom: 23px;
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
@@ -89,10 +118,26 @@
     &--color {
       color: @white;
     }
+
+    &-number {
+      margin: 0;
+      text-align: center;
+    }
+
+    &--sedona {
+      padding: 11px 0 27px 0;
+      text-align: left;
+
+      @media (min-width: @tablet-width) {
+        text-align: center;
+        padding-top: 103px;
+      }
+    }
   }
 
   &__descr {
     margin: 0;
+    padding-top: 28px;
     padding-bottom: 34px;
     font-size: 14px;
     line-height: 21px;
@@ -101,16 +146,23 @@
     &--color {
       color: @white;
     }
+
+    &--sedona {
+      padding: 0;
+      text-align: left;
+
+      @media (min-width: @tablet-width) {
+        text-align: center;
+      }
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
-  }
-}
 
-.features__item--sedona>.features__descr,
-.features__item--sedona>.features__title {
-  padding: 0;
-  text-align: left;
+    @media (min-width: @tablet-width) {
+      height: 256px;
+    }
+  }
 }
