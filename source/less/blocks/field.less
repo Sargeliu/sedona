@@ -14,14 +14,14 @@
       row-gap: 44px;
 
       @media (min-width: @tablet-width) {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 56px);
+        column-gap: 93px;
       }
 
       @media (min-width: @desktop-width) {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 56px;
+        grid-template-rows: 1fr;
       }
     }
 
@@ -29,6 +29,33 @@
       display: grid;
       grid-template-rows: repeat(3, 60px);
       row-gap: 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        background-color: #e7e5e5;
+        box-sizing: border-box;
+      }
+    }
+
+    &--contacts {
+      display: grid;
+      row-gap: 20px;
+
+      @media (min-width: @desktop-width) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0;
+        column-gap: 79px;
+      }
+    }
+
+    &--name {
+      display: grid;
+      row-gap: 20px;
     }
   }
 
@@ -40,10 +67,13 @@
     display: flex;
     align-items: center;
     margin: 0;
-    padding-bottom: 20px;
 
     &--contacts {
       flex-direction: column;
+
+      @media (min-width: @desktop-width) {
+        flex-direction: row;
+      }
     }
 
     &:last-child {
@@ -52,6 +82,7 @@
   }
 
   &__header {
+    position: relative;
     padding: 20px 0 0 0;
     font-size: 18px;
     font-weight: 700;
@@ -68,6 +99,18 @@
       align-self: start;
       padding-left: 22px;
       padding-bottom: 8px;
+
+      @media (min-width: @desktop-width) {
+        white-space: nowrap;
+        align-self: center;
+        padding: 0 13px 0 0;
+      }
+    }
+
+    &--hidden {
+      @media (min-width: @desktop-width) {
+        display: none;
+      }
     }
   }
 
