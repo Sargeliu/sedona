@@ -41,23 +41,21 @@
   .field {
     &--name {
       grid-area: name;
+      padding-left: 58px;
     }
 
     &--contacts {
       grid-area: contacts;
-
-      @media (min-width: @desktop-width) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
     }
 
     &--radio {
+      position: relative;
       grid-area: radio;
     }
 
     &--checkbox {
       grid-area: checkbox;
+      justify-self: center;
     }
 
     &--textarea {
