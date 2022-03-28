@@ -48,7 +48,7 @@
           <form class="reviews__form form" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="form__field field field--name">
               <legend class="field__header">Представьтесь:</legend>
-              <ul class="field__list">
+              <ul class="field__list field__list--name">
                 <li class="field__group">
                   <label class="field__label" for="name">Имя*:</label>
                   <input class="field__input" type="text" name="name" id="name" placeholder="Петр" required>
@@ -64,10 +64,10 @@
               </ul>
             </fieldset>
             <fieldset class="form__field field field--contacts">
-              <legend class="field__header">Контактная информация:</legend>
-              <ul class="field__list">
+              <legend class="field__header field__header--accented">Контактная информация:</legend>
+              <ul class="field__list field__list--contacts">
                 <li class="field__group field__group--contacts">
-                  <label class="field__label field__label--contacts" for="phone">Контактный телефон*:</label>
+                  <label class="field__label field__label--contacts" for="phone"><span class="field__label--hidden">Контактный</span> телефон*:</label>
                   <input class="field__input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
                 </li>
                 <li class="field__group field__group--contacts">
@@ -103,7 +103,7 @@
               </ul>
             </fieldset>
             <fieldset class="form__field field field--checkbox">
-              <legend class="field__header">Посещенные достопримечательности:</legend>
+              <legend class="field__header field__header--accented">Посещенные достопримечательности:</legend>
               <ul class="field__list field__list--checkbox">
                 <li class="field-group">
                   <label class="control">
@@ -136,7 +136,7 @@
               </ul>
             </fieldset>
             <fieldset class="form__field field field--textarea">
-              <legend class="field__header">Опишите свои эмоции:</legend>
+              <legend class="field__header field__header--accented">Опишите свои эмоции:</legend>
               <label class="visually-hidden" for="description">Опишите cвои восторги</label>
               <textarea class="field__text field__mark" name="description">Опишите подробно все свои восторги</textarea>
             </fieldset>
