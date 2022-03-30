@@ -38,6 +38,7 @@
 
       @media (min-width: @tablet-width) {
         grid-template-columns: repeat(3, 1fr);
+        padding: 26px 30px 40px 30px;
       }
     }
 
@@ -75,6 +76,7 @@
     &--food::after,
     &--gift::after {
       content: "";
+      display: block;
       width: 40px;
       height: 38px;
       position: absolute;
@@ -94,14 +96,26 @@
 
     &--housing::after {
       background-image: url("../../img/svg/house.svg");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../../img/svg/house-bg.svg");
+      }
     }
 
     &--food::after {
       background-image: url("../../img/svg/burger.svg");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../../img/svg/burger-bg.svg");
+      }
     }
 
     &--gift::after {
       background-image: url("../../img/svg/gift.svg");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../../img/svg/gift-bg.svg");
+      }
     }
   }
 
