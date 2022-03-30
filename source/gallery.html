@@ -35,7 +35,7 @@
           </li>
         </ul>
       </nav>
-       <div class="page-header__gallery-img">
+      <div class="page-header__gallery-img">
         <img class="page-header__sedona-title" src="img/mobile/sedona.svg" width="229" height="39" alt="Sedona">
       </div>
     </header>
@@ -55,7 +55,11 @@
         <ul class="gallery__list">
             <li class="gallery__item gallery__item--l info">
               <figure class="info__picture">
-                <img class="info__img" src="img/mobile/place-gallery.jpg" width="280" height="280" alt="">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/desktop/place-gallery.jpg 1x, img/desktop/place-gallery@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/tablet/place-gallery.jpg 1x, img/tablet/place-gallery@2x.jpg 2x">
+                  <img class="info__img" src="img/mobile/place-gallery.jpg" srcset="img/mobile/place-gallery@2x.jpg 2x" width="280" height="280" alt="">
+                </picture>
                 <div class="info__descr">
                   <p class="info__caption">Неродные просторы</p>
                   <cite class="info__author">Автор фото: Борис</cite>
@@ -72,7 +76,11 @@
             </li>
             <li class="gallery__item gallery__item--s info">
               <figure class="info__picture">
-                <img class="info__img" src="img/mobile/nature-gallery.jpg" width="280" height="280" alt="">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/desktop/nature-gallery.jpg 1x, img/desktop/nature-gallery@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/tablet/nature-gallery.jpg 1x, img/tablet/nature-gallery@2x.jpg 2x">
+                  <img class="info__img" src="img/mobile/nature-gallery.jpg" srcset="img/mobile/nature-gallery@2x.jpg 2x" width="280" height="280" alt="">
+                </picture>
                 <div class="info__descr">
                   <p class="info__caption">Местная растительность</p>
                   <cite class="info__author">Автор фото: Сергей</cite>
@@ -89,7 +97,11 @@
             </li>
             <li class="gallery__item gallery__item--s info">
               <figure class="info__picture">
-                <img class="info__img" src="img/mobile/road-gallery.jpg" width="280" height="280" alt="">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/desktop/road-gallery.jpg 1x, img/desktop/road-gallery@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/tablet/road-gallery.jpg 1x, img/tablet/road-gallery@2x.jpg 2x">
+                  <img class="info__img" src="img/mobile/road-gallery.jpg" srcset="img/mobile/road-gallery@2x.jpg 2x" width="280" height="280" alt="">
+                </picture>
                 <div class="info__descr">
                   <p class="info__caption">Дорога на север</p>
                   <cite class="info__author">Автор фото: Петр</cite>
@@ -106,7 +118,11 @@
             </li>
             <li class="gallery__item gallery__item--s info">
               <figure class="info__picture">
-                <img class="info__img" src="img/mobile/bridge-gallery.jpg" width="280" height="280" alt="">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/desktop/bridge-gallery.jpg 1x, img/desktop/bridge-gallery@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/tablet/bridge-gallery.jpg 1x, img/tablet/bridge-gallery@2x.jpg 2x">
+                  <img class="info__img" src="img/mobile/bridge-gallery.jpg" srcset="img/mobile/bridge-gallery@2x.jpg 2x" width="280" height="280" alt="">
+                </picture>
                 <div class="info__descr">
                   <p class="info__caption">Мост дьявола</p>
                   <cite class="info__author">Автор фото: Антон</cite>
@@ -127,9 +143,11 @@
               <h2 class="main-header__title">Все еще сомневаетесь?</h2>
               <p class="main-header__descr">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
             </header>
-            <video class="video__item" controls poster="img/mobile/video-gallery.jpg" preload="metadata" width="320" height="201">
-              <source src="video.mp4" type="video/mp4">
-            </video>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/desktop/video-gallery.jpg 1x, img/desktop/video-gallery@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/tablet/video-gallery.jpg 1x, img/tablet/video-gallery@2x.jpg 2x">
+              <img class="video__item" src="img/mobile/video-gallery.jpg" srcset="img/mobile/video-gallery@2x.jpg 2x" width="320" height="201" alt="Автодорога по Grand Canyon">
+            </picture>
             <div class="video__button">
               <button class="video__button--color video__button--repeat" type="button">
                 <span class="visually-hidden">Повторить видео</span>
