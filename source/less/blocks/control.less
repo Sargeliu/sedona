@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   position: relative;
-  display: block;
   padding-left: 75px;
 
   &__mark {
@@ -40,22 +39,22 @@
   outline: 5px solid #d5d5d5;
 }
 
-.control__input[type="checkbox"]:checked+.control__mark {
+.control__input[type="checkbox"]:checked + .control__mark {
   background-image: url("../../img/svg/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.control__input[type="checkbox"]:checked+.control__mark:focus {
+.control__input[type="checkbox"]:checked + .control__mark:focus {
   background-image: url("../../img/svg/tick-down.svg");
 }
 
-.control__input[type="radio"]:checked+.control__mark {
+.control__input[type="radio"]:checked + .control__mark {
   background-image: url("../../img/svg/shape.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.control__input[type="radio"]:checked+.control__mark:focus {
+.control__input[type="radio"]:checked + .control__mark:focus {
   background-image: url("../../img/svg/shape-down.svg");
 }

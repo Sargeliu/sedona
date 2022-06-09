@@ -8,13 +8,17 @@
     background-size: cover;
     text-align: center;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/desktop/sedona-desktop@2x.jpg");
+    }
+
     @media (min-width: @tablet-width) {
       height: 518px;
       padding-top: 77px;
       background-image: url("../../img/tablet/sedona-tablet.jpg");
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/tablet/sedona-tablet@2x.jpg")
+        background-image: url("../../img/tablet/sedona-tablet@2x.jpg");
       }
     }
 
@@ -37,14 +41,26 @@
     background-size: cover;
     text-align: center;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/mobile/sedona-gallery@2x.jpg");
+    }
+
     @media (min-width: @tablet-width) {
       height: 195px;
       padding-top: 95px;
       background-image: url("../../img/tablet/sedona-gallery.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/tablet/sedona-tablet@2x.jpg");
+      }
     }
 
     @media (min-width: @desktop-width) {
       background-image: url("../../img/desktop/sedona-gallery.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/desktop/sedona-desktop@2x.jpg");
+      }
     }
   }
 
