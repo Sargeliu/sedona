@@ -4,19 +4,23 @@
   &__list {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    padding-top: 20px;
-    padding-bottom: 25px;
+    padding: 20px 20px 25px 20px;
+
+    @media (min-width: @tablet-width) {
+      padding: 20px 0;
+    }
 
     &--checkbox {
       display: grid;
-      grid-template-rows: repeat(4, 56px);
       row-gap: 44px;
+      padding: 30px 20px;
 
       @media (min-width: @tablet-width) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, min-content);
         grid-template-rows: repeat(2, 56px);
+        justify-content: center;
         column-gap: 93px;
+        padding: 47px 0;
       }
 
       @media (min-width: @desktop-width) {
@@ -83,11 +87,41 @@
 
   &__header {
     position: relative;
+    width: 100%;
     padding: 20px 0 0 0;
     font-size: 18px;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: @mobile-width-only) {
+      border-top: 1px solid #e5e5e5;
+    }
+
+    &--line {
+      @media (min-width: @tablet-width) {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 33px;
+          left: 0;
+          width: 30%;
+          height: 1px;
+          background-color: #dbdbdb;
+          z-index: -1;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 33px;
+          right: 0;
+          width: 30%;
+          height: 1px;
+          background-color: #dbdbdb;
+        }
+      }
+    }
   }
 
   &__label {
