@@ -33,7 +33,7 @@
     &--sedona {
       display: grid;
       row-gap: 26px;
-      padding: 26px 0 40px 0;
+      padding: 26px 20px 40px 20px;
       background-color: @white;
 
       @media (min-width: @tablet-width) {
@@ -57,15 +57,11 @@
 
   &__item {
     position: relative;
-
-    &--sedona {
-      background-color: @white;
-      padding-left: 70px;
-
-      @media (min-width: @tablet-width) {
-        padding: 0;
-      }
-    }
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: "icons title" "icons descr";
+    column-gap: 9px;
 
     &--place:not(:last-child) {
       @media (max-width: @mobile-width-only) {
@@ -73,54 +69,23 @@
       }
     }
 
-    &--housing::after,
-    &--food::after,
-    &--gift::after {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 38px;
-      position: absolute;
-      top: 0;
-      left: 20px;
-      background-repeat: no-repeat;
-
-      @media (min-width: @tablet-width) {
-        width: 76px;
-        height: 75px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: 0 auto;
-      }
+    @media (min-width: @tablet-width) {
+      grid-template-columns: 1fr;
+      grid-template-areas: "icons" "title" "descr";
     }
+  }
 
-    &--housing::after {
-      background-image: url("../../img/svg/house.svg");
+  &__icons {
+    grid-area: icons;
+    color: #81b3d2;
 
-      @media (min-width: @tablet-width) {
-        background-image: url("../../img/svg/house-bg.svg");
-      }
-    }
-
-    &--food::after {
-      background-image: url("../../img/svg/burger.svg");
-
-      @media (min-width: @tablet-width) {
-        background-image: url("../../img/svg/burger-bg.svg");
-      }
-    }
-
-    &--gift::after {
-      background-image: url("../../img/svg/gift.svg");
-
-      @media (min-width: @tablet-width) {
-        background-image: url("../../img/svg/gift-bg.svg");
-      }
+    @media (min-width: @tablet-width) {
+      justify-self: center;
     }
   }
 
   &__title {
+    grid-area: title;
     position: relative;
     margin: 0;
     padding-top: 34px;
@@ -145,12 +110,12 @@
 
       @media (min-width: @tablet-width) {
         text-align: center;
-        padding-top: 103px;
       }
     }
   }
 
   &__descr {
+    grid-area: descr;
     margin: 0;
     padding-top: 28px;
     padding-bottom: 34px;

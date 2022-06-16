@@ -4,23 +4,17 @@
     display: block;
     width: 27px;
     height: 34px;
-
-    &:hover .copyright__icon {
-      fill: #81b3d2;
-    }
-
-    &:focus .copyright__icon {
-      fill-opacity: 0.3;
-    }
   }
 
   &__icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    fill: #000000;
+    color: #000000;
+
+    &:hover {
+      color: #81b3d2;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
